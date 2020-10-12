@@ -1,5 +1,4 @@
-module.exports =
-function toReadable(number) {
+module.exports = function toReadable(number) {
     let str = number.toString();
     let first = "";
     let second = "";
@@ -190,7 +189,6 @@ function toReadable(number) {
     }
 
     switch (second) {
-         
         case "0":
             second = "";
 
@@ -241,10 +239,9 @@ function toReadable(number) {
     switch (third) {
         case "0":
             if (second === "" && first === "") {
-                
                 third = "zero";
             } else {
-            third = "";
+                third = "";
             }
             break;
         case "1":
@@ -295,6 +292,4 @@ function toReadable(number) {
             break;
     }
     return `${first} ${second} ${third}`.trim().replace(/ {1,}/g, " ");
-}
-
-
+};
